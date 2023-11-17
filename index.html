@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Form Redirect</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to top left, #2C3E50, #000); /* Dark purple to black */
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        button {
+            padding: 30px 40px; /* Increased padding for a rectangle shape */
+            font-size: 28px; /* Increased font size */
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+            color: #fff;
+            border: 2px solid #fff; /* White border */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3); /* Depth effect */
+            font-weight: bold; /* Bold font */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Light up on hover */
+        }
+    </style>
+    <script>
+        function redirectToRandomForm() {
+            // Array of Microsoft Form URLs
+            var formUrls = [
+                'https://forms.office.com/e/FUVSHdv2vX',
+                'https://forms.office.com/e/FUVSHdv2vX',
+                'https://forms.office.com/e/FUVSHdv2vX',
+                'https://forms.office.com/e/FUVSHdv2vX',
+                'https://forms.office.com/e/FUVSHdv2vX'
+            ];
+
+            // Generate a random index
+            var randomIndex = Math.floor(Math.random() * formUrls.length);
+
+            // Redirect to the randomly selected form
+            window.location.href = formUrls[randomIndex];
+        }
+    </script>
+</head>
+<body>
+    <button onclick="redirectToRandomForm()">Sign Out Of Shadows</button>
+</body>
+</html>
